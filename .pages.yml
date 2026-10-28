@@ -68,9 +68,8 @@ content:
     path: _data/uz/clients.yml
     list: true
     fields:
-      - { name: name, label: Nomi, type: string }
       - { name: sector, label: Soha, type: string }
-      - { name: logo, label: Logo, type: image }
+      - { name: companies, label: Kompaniyalar, type: string, list: true }
   - name: testimonials_uz
     label: "Mijozlar fikri (UZ)"
     type: file
@@ -172,9 +171,8 @@ content:
     path: _data/ru/clients.yml
     list: true
     fields:
-      - { name: name, label: Nomi, type: string }
       - { name: sector, label: Soha, type: string }
-      - { name: logo, label: Logo, type: image }
+      - { name: companies, label: Kompaniyalar, type: string, list: true }
   - name: testimonials_ru
     label: "Mijozlar fikri (RU)"
     type: file

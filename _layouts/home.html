@@ -60,14 +60,17 @@ layout: default
       <p class="eyebrow">{{ t.clients_eyebrow }}</p>
       <h2>{{ t.clients_title }}</h2>
     </div>
-    <ul class="clients">
-      {%- for cl in d.clients %}
-      <li>
-        {%- if cl.logo != "" %}<img src="{{ cl.logo | relative_url }}" alt="{{ cl.name }}">{% else %}<b>{{ cl.name }}</b>{% endif %}
-        <span>{{ cl.sector }}</span>
-      </li>
+    <div class="client-groups">
+      {%- for g in d.clients %}
+      <div class="client-group">
+        <h3>{{ g.sector }} <span>{{ g.companies | size }}</span></h3>
+        <ul>
+          {%- for c in g.companies %}<li>{{ c }}</li>{% endfor %}
+        </ul>
+      </div>
       {%- endfor %}
-    </ul>
+    </div>
+    {%- if d.testimonials.size > 0 %}
     <div class="grid cards-2 quotes">
       {%- for q in d.testimonials %}
       <figure class="quote">
@@ -76,6 +79,7 @@ layout: default
       </figure>
       {%- endfor %}
     </div>
+    {%- endif %}
   </div>
 </section>
 
