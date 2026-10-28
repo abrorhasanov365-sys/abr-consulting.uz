@@ -10,9 +10,9 @@ about: >-
 address: "г. Ташкент"
 hours: "Пн–Сб, 09:00–18:00"
 stats:
+  - value: "100+"
+    label: "компаний нам доверяют"
   - value: "15+"
     label: "лет опыта"
-  - value: "CAP"
-    label: "и ACCA DipIFR"
-  - value: "100%"
-    label: "отчётов сдано вовремя"
+  - value: "20+"
+    label: "квалифицированных специалистов"

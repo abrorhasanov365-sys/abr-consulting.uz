@@ -10,9 +10,9 @@ about: >-
 address: "Toshkent shahri"
 hours: "Du–Sha, 09:00–18:00"
 stats:
+  - value: "100+"
+    label: "kompaniyalar ishonchi"
   - value: "15+"
     label: "yillik tajriba"
-  - value: "CAP"
-    label: "va ACCA DipIFR sertifikatlari"
-  - value: "100%"
-    label: "hisobotlar o'z vaqtida"
+  - value: "20+"
+    label: "malakali mutaxassis"
