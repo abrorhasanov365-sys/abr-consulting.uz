@@ -86,7 +86,10 @@ layout: default
       <h2>{{ t.team_title }}</h2>
     </div>
     <div class="team-grid">
-      {%- for m in d.team %}
+      {%- assign team_sorted = "" | split: "" %}
+      {%- for n in (1..4) %}{% assign grp = d.team | where: "level", n %}{% assign team_sorted = team_sorted | concat: grp %}{% endfor %}
+      {%- assign no_level = d.team | where_exp: "m", "m.level == nil" %}{% assign team_sorted = team_sorted | concat: no_level %}
+      {%- for m in team_sorted %}
       <article class="member" tabindex="0">
         {%- if m.photo != "" %}
         <img class="portrait" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">

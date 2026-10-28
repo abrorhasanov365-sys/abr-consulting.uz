@@ -88,6 +88,9 @@ content:
     fields:
       - { name: name, label: Ism, type: string }
       - { name: role, label: Lavozim, type: string }
+      - name: level
+        label: "Tartib (1 asoschi, 2 soliq maslahatchisi, 3 yetakchi buxgalter, 4 buxgalter)"
+        type: number
       - { name: photo, label: Rasm, type: image }
       - { name: bio, label: Qisqacha, type: text }
   - name: offer_uz
@@ -189,6 +192,9 @@ content:
     fields:
       - { name: name, label: Ism, type: string }
       - { name: role, label: Lavozim, type: string }
+      - name: level
+        label: "Tartib (1 asoschi, 2 soliq maslahatchisi, 3 yetakchi buxgalter, 4 buxgalter)"
+        type: number
       - { name: photo, label: Rasm, type: image }
       - { name: bio, label: Qisqacha, type: text }
   - name: offer_ru

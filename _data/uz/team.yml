@@ -1,21 +1,27 @@
 # Jamoa a'zolari. photo — assets/img/team/ papkasidagi rasm. Rasm bo'lmasa, ism bosh harflari chiqadi.
+# level — saytdagi tartib: 1 asoschi, 2 soliq maslahatchisi, 3 yetakchi buxgalter, 4 buxgalter.
 - name: Abror Hasanov
   role: Asoschi, auditor
+  level: 1
   photo: /assets/img/team/abror-hasanov.jpg
   bio: "15+ yillik tajribaga ega auditor va soliq maslahatchisi. CAP, ACCA DipIFR."
 - name: Alixon Djalalov
   role: Yetakchi buxgalter
+  level: 3
   photo: /assets/img/team/alixon-djalalov.jpg
   bio: "4 yillik tajribaga ega buxgalter. QQS va foyda solig‘i hisobotlarini tayyorlaydi, korxonaning moliyaviy holatini tahlil qiladi."
 - name: Abdurasul Mirzohamdamov
   role: Buxgalter
+  level: 4
   photo: /assets/img/team/abdurasul-mirzohamdamov.jpg
   bio: "3 yillik tajriba: foyda solig'i va QQS hisobotlarini tayyorlash, buxgalteriya hujjatlarini yuritish va eksport-import operatsiyalarini hisobga olish."
 - name: Azamat Nazarov
   role: Buxgalter
+  level: 4
   photo: /assets/img/team/azamat-nazarov.jpg
   bio: "8 yillik amaliy tajriba: MChJ va YaTTlarga buxgalteriya xizmati, soliq hisobotlari, QQS, 1C 8.3, ish haqi hisob-kitobi, hisobdagi xatolarni aniqlash va tuzatish."
 - name: Samandar Turobov
   role: Yetakchi buxgalter
+  level: 3
   photo: /assets/img/team/samandar-turobov.jpg
   bio: "3,5 yillik tajribaga ega buxgalter. Moliyaviy va soliq hisobotlarini tayyorlash, tahlil qilish va topshirish. ACCA Financial Reporting (FR) sertifikati."
