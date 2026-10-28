@@ -39,3 +39,10 @@ document.querySelectorAll('.chip[data-filter]').forEach(chip => chip.addEventLis
     el.hidden = chip.dataset.filter && el.dataset.category !== chip.dataset.filter;
   });
 }));
+
+// Jamoa: kartochka bosilganda to'liq tavsif ochiladi
+document.querySelectorAll('.member').forEach(m => {
+  const toggle = () => m.classList.toggle('open');
+  m.addEventListener('click', toggle);
+  m.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
