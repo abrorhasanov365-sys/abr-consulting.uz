@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow on-dark">{{ t.news_eyebrow }}</p>
+    <h1>{{ t.news_title }}</h1>
+    <p class="lead">{{ t.news_lead }}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    {%- assign posts = site.posts | where: "lang", lang -%}
+    {%- assign cats = posts | map: "category" | compact | uniq -%}
+    {%- if cats.size > 1 %}
+    <div class="filters" role="group" aria-label="{{ t.filter_label }}">
+      <button class="chip is-active" data-filter="">{{ t.all }}</button>
+      {%- for cat in cats %}<button class="chip" data-filter="{{ cat }}">{{ cat }}</button>{% endfor %}
+    </div>
+    {%- endif %}
+    <div class="grid cards-3" id="post-list">
+      {%- for post in posts %}
+      <div data-category="{{ post.category }}">{% include post-card.html post=post %}</div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-# Kompaniya haqida asosiy ma'lumotlar. Qiymatlarni o'zgartirsangiz, sayt avtomatik yangilanadi.
+# Kompaniya haqida (o'zbekcha). Telefon va email: _data/contacts.yml
 name: ABR-CONSULTING
 tagline: "Buxgalteriya · Soliq · Audit"
 hero_title: "Hisobingiz tartibda, soliq xavfi nazoratda"
@@ -7,16 +7,8 @@ about: >-
   ABR-CONSULTING — auditor va soliq maslahatchisi Abror Hasanov asos solgan buxgalteriya va
   maslahat kompaniyasi. Biz kichik va o'rta biznes uchun buxgalteriya hisobini autsorsing asosida
   yuritamiz, soliq rejalashtirish va MHXS bo'yicha yordam beramiz.
-phone: "+998 97 431 60 06"
-phone_link: "+998974316006"
-email: abrorhasanov365@gmail.com
-telegram: ""          # masalan: abr_consulting (@ belgisisiz)
-instagram: "abr_consulting_jamoasi"
 address: "Toshkent shahri"
 hours: "Du–Sha, 09:00–18:00"
-map_link: ""          # Google yoki Yandex xarita havolasi (ixtiyoriy)
-
-# Raqamlardagi yutuqlar (bosh sahifa)
 stats:
   - value: "15+"
     label: "yillik tajriba"

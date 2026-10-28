@@ -1,7 +1,7 @@
 {%- assign p = include.post -%}
 <a class="post-card" href="{{ p.url | relative_url }}">
-  <p class="eyebrow">{{ p.category | default: "Yangilik" }} · <time datetime="{{ p.date | date_to_xmlschema }}">{% include date.html date=p.date %}</time></p>
+  <p class="eyebrow">{{ p.category | default: t.news_default }} · <time datetime="{{ p.date | date_to_xmlschema }}">{% include date.html date=p.date %}</time></p>
   <h3>{{ p.title }}</h3>
   <p class="muted">{{ p.summary | default: p.excerpt | strip_html | truncatewords: 22 }}</p>
-  <span class="more">O'qish →</span>
+  <span class="more">{{ t.read }}</span>
 </a>

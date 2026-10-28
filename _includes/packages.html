@@ -1,16 +1,16 @@
 <div class="grid cards-3 packages">
-  {%- for p in site.data.offer.packages %}
+  {%- for p in d.offer.packages %}
   <article class="package{% if p.featured %} featured{% endif %}">
-    {%- if p.featured %}<span class="badge">Ko'p tanlanadi</span>{% endif %}
+    {%- if p.featured %}<span class="badge">{{ t.popular }}</span>{% endif %}
     <h3>{{ p.name }}</h3>
     <p class="muted">{{ p.for }}</p>
-    <p class="price">{% if p.price != "" %}{{ p.price }} <small>so'm / {{ p.period }}</small>{% else %}Kelishiladi{% endif %}</p>
+    <p class="price">{% if p.price != "" %}{{ p.price }} <small>{{ t.currency }} / {{ p.period }}</small>{% else %}{{ t.negotiable }}{% endif %}</p>
     <ul class="checks small">
       {%- for f in p.features %}
       <li>{% include icon.html name="check" %}<span>{{ f }}</span></li>
       {%- endfor %}
     </ul>
-    <a class="btn {% unless p.featured %}btn-outline{% endunless %}" href="{{ '/#aloqa' | relative_url }}" data-package="{{ p.name }}">Tanlash</a>
+    <a class="btn {% unless p.featured %}btn-outline{% endunless %}" href="{{ t.home | append: '#' | append: t.ids.contact | relative_url }}" data-package="{{ t.f_tariff }}: {{ p.name }}">{{ t.choose }}</a>
   </article>
   {%- endfor %}
 </div>

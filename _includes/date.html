@@ -1,1 +1,1 @@
-{%- assign d = include.date -%}{%- assign m = d | date: "%-m" | minus: 1 -%}{{ d | date: "%-d" }}-{{ site.data.months[m] }}, {{ d | date: "%Y" }}
+{%- assign m = include.date | date: "%-m" | minus: 1 -%}{{ include.date | date: "%-d" }}{% if lang == "uz" %}-{% else %} {% endif %}{{ t.months[m] }} {{ include.date | date: "%Y" }}

@@ -3,7 +3,6 @@ title: ABR-CONSULTING
 description: "Buxgalteriya autsorsingi, soliq maslahati va audit. Biznesingiz hisobini tartibli va xavfsiz yuritamiz."
 url: "https://abr-consulting.uz"
 baseurl: ""
-lang: uz_UZ
 timezone: Asia/Tashkent
 permalink: /yangiliklar/:year/:month/:title/
 
@@ -16,9 +15,13 @@ feed:
   path: yangiliklar/feed.xml
 
 defaults:
-  - scope: { path: "", type: posts }
-    values: { layout: post }
   - scope: { path: "" }
-    values: { image: /assets/img/og.png }
+    values: { image: /assets/img/og.png, lang: uz }
+  - scope: { path: "", type: posts }
+    values: { layout: post, alt: /ru/novosti/ }
+  - scope: { path: "ru" }
+    values: { lang: ru }
+  - scope: { path: "ru", type: posts }
+    values: { permalink: "/ru/novosti/:year/:month/:title/", alt: /yangiliklar/ }
 
 exclude: [README.md, Gemfile, Gemfile.lock, .pages.yml, vendor]

@@ -3,8 +3,19 @@ media:
   input: assets/img
   output: /assets/img
 content:
-  - name: posts
-    label: Yangiliklar
+  - name: contacts
+    label: "Aloqa (umumiy) / Контакты"
+    type: file
+    path: _data/contacts.yml
+    fields:
+      - { name: phone, label: Telefon, type: string }
+      - { name: phone_link, label: "Telefon (bo'shliqsiz)", type: string }
+      - { name: email, label: Email, type: string }
+      - { name: telegram, label: "Telegram (@siz)", type: string }
+      - { name: instagram, label: "Instagram (@siz)", type: string }
+      - { name: map_link, label: Xarita havolasi, type: string }
+  - name: posts_uz
+    label: "Yangiliklar (UZ)"
     type: collection
     path: _posts
     filename: "{year}-{month}-{day}-{primary}.md"
@@ -20,24 +31,18 @@ content:
       - { name: summary, label: Qisqa tavsif, type: text }
       - { name: cover, label: Muqova rasmi, type: image }
       - { name: body, label: Matn, type: rich-text }
-  - name: company
-    label: Kompaniya ma'lumotlari
+  - name: company_uz
+    label: "Kompaniya ma'lumotlari (UZ)"
     type: file
-    path: _data/company.yml
+    path: _data/uz/company.yml
     fields:
       - { name: name, label: Nomi, type: string }
       - { name: tagline, label: Shior, type: string }
       - { name: hero_title, label: Bosh sarlavha, type: string }
       - { name: hero_text, label: Bosh matn, type: text }
       - { name: about, label: Biz haqimizda, type: text }
-      - { name: phone, label: Telefon (ko'rinishi), type: string }
-      - { name: phone_link, label: Telefon (raqam, bo'shliqsiz), type: string }
-      - { name: email, label: Email, type: string }
-      - { name: telegram, label: Telegram (@siz), type: string }
-      - { name: instagram, label: Instagram (@siz), type: string }
       - { name: address, label: Manzil, type: string }
       - { name: hours, label: Ish vaqti, type: string }
-      - { name: map_link, label: Xarita havolasi, type: string }
       - name: stats
         label: Raqamlar
         type: object
@@ -45,10 +50,10 @@ content:
         fields:
           - { name: value, label: Qiymat, type: string }
           - { name: label, label: Izoh, type: string }
-  - name: services
-    label: Xizmatlar
+  - name: services_uz
+    label: "Xizmatlar (UZ)"
     type: file
-    path: _data/services.yml
+    path: _data/uz/services.yml
     list: true
     fields:
       - name: icon
@@ -57,38 +62,139 @@ content:
         options: { values: [ledger, tax, audit, ifrs, payroll, onec, shield, chart] }
       - { name: title, label: Nomi, type: string }
       - { name: text, label: Tavsif, type: text }
-  - name: clients
-    label: Mijozlar
+  - name: clients_uz
+    label: "Mijozlar (UZ)"
     type: file
-    path: _data/clients.yml
+    path: _data/uz/clients.yml
     list: true
     fields:
       - { name: name, label: Nomi, type: string }
       - { name: sector, label: Soha, type: string }
       - { name: logo, label: Logo, type: image }
-  - name: testimonials
-    label: Mijozlar fikri
+  - name: testimonials_uz
+    label: "Mijozlar fikri (UZ)"
     type: file
-    path: _data/testimonials.yml
+    path: _data/uz/testimonials.yml
     list: true
     fields:
       - { name: text, label: Fikr, type: text }
       - { name: author, label: Muallif, type: string }
       - { name: company, label: Kompaniya, type: string }
-  - name: team
-    label: Jamoa
+  - name: team_uz
+    label: "Jamoa (UZ)"
     type: file
-    path: _data/team.yml
+    path: _data/uz/team.yml
     list: true
     fields:
       - { name: name, label: Ism, type: string }
       - { name: role, label: Lavozim, type: string }
       - { name: photo, label: Rasm, type: image }
       - { name: bio, label: Qisqacha, type: text }
-  - name: offer
-    label: Tijorat taklifi
+  - name: offer_uz
+    label: "Tijorat taklifi (UZ)"
     type: file
-    path: _data/offer.yml
+    path: _data/uz/offer.yml
+    fields:
+      - { name: intro, label: Kirish matni, type: text }
+      - name: packages
+        label: Tariflar
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Nomi, type: string }
+          - { name: for, label: Kim uchun, type: string }
+          - { name: price, label: "Narx (bo'sh = Kelishiladi)", type: string }
+          - { name: period, label: Davr, type: string }
+          - { name: featured, label: Ajratib ko'rsatish, type: boolean }
+          - { name: features, label: Imkoniyatlar, type: string, list: true }
+      - { name: included, label: Barcha tariflarga kiradi, type: string, list: true }
+      - name: steps
+        label: Ishlash bosqichlari
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Bosqich, type: string }
+          - { name: text, label: Izoh, type: text }
+  - name: posts_ru
+    label: "Yangiliklar (RU)"
+    type: collection
+    path: ru/_posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, category, date]
+    fields:
+      - { name: title, label: Sarlavha, type: string, required: true }
+      - { name: date, label: Sana, type: date }
+      - name: category
+        label: Turkum
+        type: select
+        options: { values: [Налоги, Бухгалтерия, Советы, Компания, Законодательство] }
+      - { name: summary, label: Qisqa tavsif, type: text }
+      - { name: cover, label: Muqova rasmi, type: image }
+      - { name: body, label: Matn, type: rich-text }
+  - name: company_ru
+    label: "Kompaniya ma'lumotlari (RU)"
+    type: file
+    path: _data/ru/company.yml
+    fields:
+      - { name: name, label: Nomi, type: string }
+      - { name: tagline, label: Shior, type: string }
+      - { name: hero_title, label: Bosh sarlavha, type: string }
+      - { name: hero_text, label: Bosh matn, type: text }
+      - { name: about, label: Biz haqimizda, type: text }
+      - { name: address, label: Manzil, type: string }
+      - { name: hours, label: Ish vaqti, type: string }
+      - name: stats
+        label: Raqamlar
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Qiymat, type: string }
+          - { name: label, label: Izoh, type: string }
+  - name: services_ru
+    label: "Xizmatlar (RU)"
+    type: file
+    path: _data/ru/services.yml
+    list: true
+    fields:
+      - name: icon
+        label: Belgi
+        type: select
+        options: { values: [ledger, tax, audit, ifrs, payroll, onec, shield, chart] }
+      - { name: title, label: Nomi, type: string }
+      - { name: text, label: Tavsif, type: text }
+  - name: clients_ru
+    label: "Mijozlar (RU)"
+    type: file
+    path: _data/ru/clients.yml
+    list: true
+    fields:
+      - { name: name, label: Nomi, type: string }
+      - { name: sector, label: Soha, type: string }
+      - { name: logo, label: Logo, type: image }
+  - name: testimonials_ru
+    label: "Mijozlar fikri (RU)"
+    type: file
+    path: _data/ru/testimonials.yml
+    list: true
+    fields:
+      - { name: text, label: Fikr, type: text }
+      - { name: author, label: Muallif, type: string }
+      - { name: company, label: Kompaniya, type: string }
+  - name: team_ru
+    label: "Jamoa (RU)"
+    type: file
+    path: _data/ru/team.yml
+    list: true
+    fields:
+      - { name: name, label: Ism, type: string }
+      - { name: role, label: Lavozim, type: string }
+      - { name: photo, label: Rasm, type: image }
+      - { name: bio, label: Qisqacha, type: text }
+  - name: offer_ru
+    label: "Tijorat taklifi (RU)"
+    type: file
+    path: _data/ru/offer.yml
     fields:
       - { name: intro, label: Kirish matni, type: text }
       - name: packages

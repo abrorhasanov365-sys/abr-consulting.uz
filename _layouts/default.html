@@ -1,21 +1,25 @@
+{%- include vars.html -%}
 <!doctype html>
-<html lang="uz">
+<html lang="{{ lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2E2B76">
 {% seo title=false %}
-<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.data.company.tagline }}{% endif %}</title>
+<title>{% if page.title %}{{ page.title }} — ABR-CONSULTING{% else %}ABR-CONSULTING — {{ d.company.tagline }}{% endif %}</title>
+{%- if page.alt %}
+<link rel="alternate" hreflang="{% if lang == 'uz' %}ru{% else %}uz{% endif %}" href="{{ page.alt | absolute_url }}">
+{%- endif %}
 <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
 <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=Source+Sans+3:wght@400;600;700&subset=cyrillic&display=swap">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 {% feed_meta %}
 </head>
 <body class="{{ page.body_class }}">
-<a class="skip" href="#main">Asosiy qismga o'tish</a>
+<a class="skip" href="#main">{{ t.skip }}</a>
 {% include header.html %}
 <main id="main">
 {{ content }}

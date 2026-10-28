@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Sahifa topilmadi
+title: "Sahifa topilmadi / Страница не найдена"
 permalink: /404.html
 ---
+{%- include vars.html -%}
 <section class="page-head">
   <div class="container">
     <p class="eyebrow on-dark">404</p>
     <h1>Sahifa topilmadi</h1>
-    <p class="lead">Havola eskirgan yoki noto'g'ri yozilgan bo'lishi mumkin.</p>
-    <div class="actions"><a class="btn btn-cream" href="{{ '/' | relative_url }}">Bosh sahifaga</a></div>
+    <p class="lead">Havola eskirgan yoki noto'g'ri yozilgan bo'lishi mumkin. <span lang="ru">Страница не найдена.</span></p>
+    <div class="actions"><a class="btn btn-cream" href="{{ '/' | relative_url }}">Bosh sahifaga</a><a class="btn btn-ghost" href="{{ '/ru/' | relative_url }}" lang="ru">На главную</a></div>
   </div>
 </section>

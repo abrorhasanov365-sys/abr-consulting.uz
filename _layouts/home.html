@@ -1,0 +1,138 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow on-dark">{{ d.company.tagline }}</p>
+      <h1>{{ d.company.hero_title }}</h1>
+      <p class="lead">{{ d.company.hero_text }}</p>
+      <div class="actions">
+        <a class="btn btn-cream" href="{{ t.offer_url | relative_url }}">{{ t.offer_btn }}</a>
+        <a class="btn btn-ghost" href="#{{ t.ids.contact }}">{{ t.free_consult }}</a>
+      </div>
+    </div>
+    <ul class="stats">
+      {%- for s in d.company.stats %}
+      <li><b>{{ s.value }}</b><span>{{ s.label }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="{{ t.ids.services }}">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{{ t.services_eyebrow }}</p>
+      <h2>{{ t.services_title }}</h2>
+    </div>
+    <div class="grid cards-3">
+      {%- for s in d.services %}
+      <article class="card">
+        <span class="card-ico">{% include icon.html name=s.icon %}</span>
+        <h3>{{ s.title }}</h3>
+        <p class="muted">{{ s.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="{{ t.ids.about }}">
+  <div class="container about">
+    <div>
+      <p class="eyebrow">{{ t.about_eyebrow }}</p>
+      <h2>{{ t.about_title }}</h2>
+      <p>{{ d.company.about }}</p>
+    </div>
+    <ul class="checks">
+      {%- for item in d.offer.included %}
+      <li>{% include icon.html name="check" %}<span>{{ item }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="{{ t.ids.clients }}">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{{ t.clients_eyebrow }}</p>
+      <h2>{{ t.clients_title }}</h2>
+    </div>
+    <ul class="clients">
+      {%- for cl in d.clients %}
+      <li>
+        {%- if cl.logo != "" %}<img src="{{ cl.logo | relative_url }}" alt="{{ cl.name }}">{% else %}<b>{{ cl.name }}</b>{% endif %}
+        <span>{{ cl.sector }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="grid cards-2 quotes">
+      {%- for q in d.testimonials %}
+      <figure class="quote">
+        <blockquote>“{{ q.text }}”</blockquote>
+        <figcaption><b>{{ q.author }}</b>, {{ q.company }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="{{ t.ids.team }}">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{{ t.team_eyebrow }}</p>
+      <h2>{{ t.team_title }}</h2>
+    </div>
+    <div class="grid cards-3">
+      {%- for m in d.team %}
+      <article class="member">
+        {%- if m.photo != "" %}
+        <img class="avatar" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+        {%- else %}
+        {%- assign parts = m.name | split: " " %}
+        <span class="avatar avatar-text">{{ parts[0] | slice: 0 }}{{ parts[1] | slice: 0 }}</span>
+        {%- endif %}
+        <div>
+          <h3>{{ m.name }}</h3>
+          <p class="role">{{ m.role }}</p>
+          <p class="muted">{{ m.bio }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="{{ t.ids.news }}">
+  <div class="container">
+    <div class="section-head row">
+      <div>
+        <p class="eyebrow">{{ t.news_eyebrow }}</p>
+        <h2>{{ t.news_title }}</h2>
+      </div>
+      <a class="link" href="{{ t.news_url | relative_url }}">{{ t.all }} →</a>
+    </div>
+    <div class="grid cards-3">
+      {%- assign posts = site.posts | where: "lang", lang %}
+      {%- for post in posts limit: 3 %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="{{ t.ids.pricing }}">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{{ t.pricing_eyebrow }}</p>
+      <h2>{{ t.pricing_title }}</h2>
+      <p class="muted">{{ d.offer.intro }}</p>
+    </div>
+    {% include packages.html %}
+    <p class="center"><a class="btn" href="{{ t.offer_url | relative_url }}">{{ t.full_offer }}</a></p>
+  </div>
+</section>
+
+{% include contact.html %}

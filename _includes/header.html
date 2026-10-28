@@ -1,12 +1,19 @@
 <header class="site-header">
   <div class="container header-inner">
     {% include logo.html variant="dark" %}
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menyu"><span></span><span></span></button>
-    <nav id="nav" class="nav">
-      {%- for item in site.data.nav %}
-      <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
-      {%- endfor %}
-      <a class="btn btn-sm" href="{{ '/#aloqa' | relative_url }}">Bog'lanish</a>
-    </nav>
+    <div class="header-right">
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="{{ t.menu }}"><span></span><span></span></button>
+      <nav id="nav" class="nav">
+        {%- for item in d.nav %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {%- endfor %}
+        <a class="btn btn-sm" href="{{ t.home | append: '#' | append: t.ids.contact | relative_url }}">{{ t.contact_btn }}</a>
+      </nav>
+      {%- assign alt = page.alt | default: site.data.ui[lang].home %}
+      <div class="lang-switch" role="group" aria-label="Til / Язык">
+        <a href="{% if lang == 'uz' %}#{% else %}{{ alt | relative_url }}{% endif %}" hreflang="uz" lang="uz"{% if lang == 'uz' %} aria-current="true"{% endif %}>UZ</a>
+        <a href="{% if lang == 'ru' %}#{% else %}{{ alt | relative_url }}{% endif %}" hreflang="ru" lang="ru"{% if lang == 'ru' %} aria-current="true"{% endif %}>RU</a>
+      </div>
+    </div>
   </div>
 </header>

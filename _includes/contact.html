@@ -1,32 +1,32 @@
-{%- assign c = site.data.company -%}
-<section class="section contact" id="aloqa">
+<section class="section contact" id="{{ t.ids.contact }}">
   <div class="container contact-grid">
     <div>
-      <p class="eyebrow on-dark">Aloqa</p>
-      <h2>Bepul maslahatga yoziling</h2>
-      <p class="lead">Hozirgi hisob holatingizni ko'rib chiqamiz va sizga mos yechimni taklif qilamiz.</p>
+      <p class="eyebrow on-dark">{{ t.contact_eyebrow }}</p>
+      <h2>{{ t.contact_title }}</h2>
+      <p class="lead">{{ t.contact_lead }}</p>
       <ul class="contact-list">
-        <li>{% include icon.html name="phone" %}<a href="tel:{{ c.phone_link }}">{{ c.phone }}</a></li>
-        <li>{% include icon.html name="mail" %}<a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
-        {%- if c.telegram != "" %}<li>{% include icon.html name="telegram" %}<a href="https://t.me/{{ c.telegram }}">@{{ c.telegram }}</a></li>{% endif %}
-        <li>{% include icon.html name="pin" %}{% if c.map_link != "" %}<a href="{{ c.map_link }}">{{ c.address }}</a>{% else %}<span>{{ c.address }}</span>{% endif %}</li>
-        <li>{% include icon.html name="clock" %}<span>{{ c.hours }}</span></li>
+        <li>{% include icon.html name="phone" %}<a href="tel:{{ k.phone_link }}">{{ k.phone }}</a></li>
+        <li>{% include icon.html name="mail" %}<a href="mailto:{{ k.email }}">{{ k.email }}</a></li>
+        {%- if k.telegram != "" %}<li>{% include icon.html name="telegram" %}<a href="https://t.me/{{ k.telegram }}">@{{ k.telegram }}</a></li>{% endif %}
+        {%- if k.instagram != "" %}<li>{% include icon.html name="instagram" %}<a href="https://instagram.com/{{ k.instagram }}">@{{ k.instagram }}</a></li>{% endif %}
+        <li>{% include icon.html name="pin" %}{% if k.map_link != "" %}<a href="{{ k.map_link }}">{{ d.company.address }}</a>{% else %}<span>{{ d.company.address }}</span>{% endif %}</li>
+        <li>{% include icon.html name="clock" %}<span>{{ d.company.hours }}</span></li>
       </ul>
     </div>
-    <form class="form" id="request-form" data-email="{{ c.email }}">
-      <label>Ismingiz<input name="name" required autocomplete="name"></label>
-      <label>Telefon<input name="phone" type="tel" required autocomplete="tel" placeholder="+998"></label>
-      <label>Kompaniya<input name="company" autocomplete="organization"></label>
-      <label>Qiziqtirgan xizmat
+    <form class="form" id="request-form" data-email="{{ k.email }}" data-subject="{{ t.f_subject }}">
+      <label>{{ t.f_name }}<input name="name" required autocomplete="name"></label>
+      <label>{{ t.f_phone }}<input name="phone" type="tel" required autocomplete="tel" placeholder="+998"></label>
+      <label>{{ t.f_company }}<input name="company" autocomplete="organization"></label>
+      <label>{{ t.f_service }}
         <select name="service">
-          <option value="">Tanlang</option>
-          {%- for s in site.data.services %}<option>{{ s.title }}</option>{% endfor %}
-          {%- for p in site.data.offer.packages %}<option>Tarif: {{ p.name }}</option>{% endfor %}
+          <option value="">{{ t.f_choose }}</option>
+          {%- for s in d.services %}<option>{{ s.title }}</option>{% endfor %}
+          {%- for p in d.offer.packages %}<option>{{ t.f_tariff }}: {{ p.name }}</option>{% endfor %}
         </select>
       </label>
-      <label>Xabar<textarea name="message" rows="3"></textarea></label>
-      <button class="btn btn-cream" type="submit">So'rov yuborish</button>
-      <p class="form-note">Tugma bosilganda pochta dasturingiz tayyor xat bilan ochiladi.</p>
+      <label>{{ t.f_message }}<textarea name="message" rows="3"></textarea></label>
+      <button class="btn btn-cream" type="submit">{{ t.f_submit }}</button>
+      <p class="form-note">{{ t.f_note }}</p>
     </form>
   </div>
 </section>

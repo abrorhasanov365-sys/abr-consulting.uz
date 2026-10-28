@@ -11,7 +11,7 @@ if (btn && nav) {
 
 // Tarif tugmasi bosilganda formadagi xizmatni tanlash
 document.querySelectorAll('[data-package]').forEach(a => a.addEventListener('click', () => {
-  try { sessionStorage.setItem('abr-package', 'Tarif: ' + a.dataset.package); } catch (e) {}
+  try { sessionStorage.setItem('abr-package', a.dataset.package); } catch (e) {}
 }));
 const form = document.getElementById('request-form');
 if (form) {
@@ -22,15 +22,13 @@ if (form) {
   // So'rovni pochta orqali yuborish (statik sayt, server kerak emas)
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const f = form.elements;
-    const body = [
-      'Ism: ' + f.name.value,
-      'Telefon: ' + f.phone.value,
-      'Kompaniya: ' + f.company.value,
-      'Xizmat: ' + f.service.value,
-      '', f.message.value
-    ].join('\n');
-    location.href = 'mailto:' + form.dataset.email + '?subject=' + encodeURIComponent('Saytdan so\'rov: ' + (f.service.value || 'maslahat')) + '&body=' + encodeURIComponent(body);
+    // Har bir maydon yorlig'i bilan xat matnini yig'amiz (til bo'yicha avtomatik)
+    const lines = [...form.querySelectorAll('label')].map(l => {
+      const el = l.querySelector('input,select,textarea');
+      return el.tagName === 'TEXTAREA' ? '\n' + el.value : l.firstChild.textContent.trim() + ': ' + el.value;
+    });
+    const service = form.elements.service.value;
+    location.href = 'mailto:' + form.dataset.email + '?subject=' + encodeURIComponent(form.dataset.subject + (service ? ': ' + service : '')) + '&body=' + encodeURIComponent(lines.join('\n'));
   });
 }
 

@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
+{%- include vars.html -%}
 <article class="container article">
-  <a class="back" href="{{ '/yangiliklar/' | relative_url }}">← Barcha yangiliklar</a>
+  <a class="back" href="{{ t.news_url | relative_url }}">{{ t.all_news }}</a>
   <header>
-    <p class="eyebrow">{{ page.category | default: "Yangilik" }} · <time datetime="{{ page.date | date_to_xmlschema }}">{% include date.html date=page.date %}</time></p>
+    <p class="eyebrow">{{ page.category | default: t.news_default }} · <time datetime="{{ page.date | date_to_xmlschema }}">{% include date.html date=page.date %}</time></p>
     <h1>{{ page.title }}</h1>
     {% if page.summary %}<p class="lead">{{ page.summary }}</p>{% endif %}
   </header>
@@ -12,9 +13,9 @@ layout: default
   <div class="prose">{{ content }}</div>
   <aside class="cta-box">
     <div>
-      <h2>Savolingiz bormi?</h2>
-      <p>Mutaxassislarimiz sizning holatingiz bo'yicha bepul maslahat beradi.</p>
+      <h2>{{ t.question_title }}</h2>
+      <p>{{ t.question_text }}</p>
     </div>
-    <a class="btn" href="{{ '/#aloqa' | relative_url }}">Bog'lanish</a>
+    <a class="btn btn-cream" href="{{ t.home | append: '#' | append: t.ids.contact | relative_url }}">{{ t.contact_btn }}</a>
   </aside>
 </article>

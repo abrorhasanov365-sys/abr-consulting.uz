@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow on-dark">{{ t.pricing_eyebrow }}</p>
+    <h1>{{ t.offer_title }}</h1>
+    <p class="lead">{{ d.offer.intro }}</p>
+    <div class="actions no-print">
+      <a class="btn btn-cream" href="{{ t.home | append: '#' | append: t.ids.contact | relative_url }}">{{ t.request }}</a>
+      <button class="btn btn-ghost" type="button" onclick="window.print()">{{ t.print }}</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">{{ t.pricing_title }}</p><h2>{{ t.packages_title }}</h2></div>
+    {% include packages.html %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container about">
+    <div>
+      <p class="eyebrow">{{ t.guarantees_eyebrow }}</p>
+      <h2>{{ t.guarantees_title }}</h2>
+      <p class="muted">{{ t.guarantees_text }}</p>
+    </div>
+    <ul class="checks">
+      {%- for item in d.offer.included %}<li>{% include icon.html name="check" %}<span>{{ item }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">{{ t.steps_eyebrow }}</p><h2>{{ t.steps_title }}</h2></div>
+    <ol class="steps">
+      {%- for s in d.offer.steps %}<li><h3>{{ s.title }}</h3><p class="muted">{{ s.text }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">{{ t.services_eyebrow }}</p><h2>{{ t.extra_title }}</h2></div>
+    <div class="grid cards-3">
+      {%- for s in d.services %}
+      <article class="card"><span class="card-ico">{% include icon.html name=s.icon %}</span><h3>{{ s.title }}</h3><p class="muted">{{ s.text }}</p></article>
+      {%- endfor %}
+    </div>
+    <p class="print-only">ABR-CONSULTING · {{ k.phone }} · {{ k.email }} · {{ site.url | remove: "https://" }}</p>
+  </div>
+</section>

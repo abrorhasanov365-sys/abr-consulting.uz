@@ -1,0 +1,127 @@
+# Interfeys matnlari / Тексты интерфейса
+uz:
+  home: /
+  news_url: /yangiliklar/
+  offer_url: /taklif/
+  months: [yanvar, fevral, mart, aprel, may, iyun, iyul, avgust, sentabr, oktabr, noyabr, dekabr]
+  skip: "Asosiy qismga o'tish"
+  menu: Menyu
+  contact_btn: "Bog'lanish"
+  ids: { services: xizmatlar, about: biz-haqimizda, clients: mijozlar, team: jamoa, news: yangiliklar, pricing: tariflar, contact: aloqa }
+  offer_btn: "Tijorat taklifi"
+  free_consult: "Bepul maslahat"
+  services_eyebrow: Xizmatlar
+  services_title: "Buxgalteriya va soliq bo'yicha to'liq xizmat"
+  about_eyebrow: "Biz haqimizda"
+  about_title: "Nega aynan ABR-CONSULTING?"
+  clients_eyebrow: Mijozlar
+  clients_title: "Bizga ishonch bildirganlar"
+  team_eyebrow: Jamoa
+  team_title: "Hisobingiz kimlarning qo'lida"
+  news_eyebrow: Yangiliklar
+  news_title: "Buxgalteriya va soliq yangiliklari"
+  news_lead: "Qonunchilikdagi o'zgarishlar, muddatlar va amaliy maslahatlar."
+  all: "Barchasi"
+  all_news: "← Barcha yangiliklar"
+  news_default: Yangilik
+  read: "O'qish →"
+  pricing_eyebrow: "Tijorat taklifi"
+  pricing_title: Tariflar
+  full_offer: "To'liq tijorat taklifi"
+  popular: "Ko'p tanlanadi"
+  negotiable: Kelishiladi
+  currency: "so'm"
+  choose: Tanlash
+  offer_title: "Buxgalteriya va soliq xizmatlari"
+  request: "So'rov qoldirish"
+  print: "PDF / chop etish"
+  packages_title: "Biznesingizga mos paket"
+  guarantees_eyebrow: "Har bir tarifda"
+  guarantees_title: Kafolatlar
+  guarantees_text: "Shartnoma tuzilgan kundan boshlab hisobingiz uchun javobgarlikni o'z zimmamizga olamiz."
+  steps_eyebrow: "Qanday ishlaymiz"
+  steps_title: "4 qadamda boshlaymiz"
+  extra_title: "Qo'shimcha xizmatlar"
+  contact_eyebrow: Aloqa
+  contact_title: "Bepul maslahatga yoziling"
+  contact_lead: "Hozirgi hisob holatingizni ko'rib chiqamiz va sizga mos yechimni taklif qilamiz."
+  f_name: Ismingiz
+  f_phone: Telefon
+  f_company: Kompaniya
+  f_service: "Qiziqtirgan xizmat"
+  f_choose: Tanlang
+  f_tariff: Tarif
+  f_message: Xabar
+  f_submit: "So'rov yuborish"
+  f_note: "Tugma bosilganda pochta dasturingiz tayyor xat bilan ochiladi."
+  f_subject: "Saytdan so'rov"
+  question_title: "Savolingiz bormi?"
+  question_text: "Mutaxassislarimiz sizning holatingiz bo'yicha bepul maslahat beradi."
+  rights: "Barcha huquqlar himoyalangan."
+  filter_label: Turkum
+  notfound_title: "Sahifa topilmadi"
+  notfound_text: "Havola eskirgan yoki noto'g'ri yozilgan bo'lishi mumkin."
+  to_home: "Bosh sahifaga"
+ru:
+  home: /ru/
+  news_url: /ru/novosti/
+  offer_url: /ru/predlozhenie/
+  months: [января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+  skip: "Перейти к содержанию"
+  menu: Меню
+  contact_btn: "Связаться"
+  ids: { services: uslugi, about: o-nas, clients: klienty, team: komanda, news: novosti, pricing: tarify, contact: kontakty }
+  offer_btn: "Коммерческое предложение"
+  free_consult: "Бесплатная консультация"
+  services_eyebrow: Услуги
+  services_title: "Полный спектр бухгалтерских и налоговых услуг"
+  about_eyebrow: "О нас"
+  about_title: "Почему ABR-CONSULTING?"
+  clients_eyebrow: Клиенты
+  clients_title: "Нам доверяют"
+  team_eyebrow: Команда
+  team_title: "Кто ведёт ваш учёт"
+  news_eyebrow: Новости
+  news_title: "Новости бухгалтерии и налогов"
+  news_lead: "Изменения в законодательстве, сроки и практические советы."
+  all: "Все"
+  all_news: "← Все новости"
+  news_default: Новость
+  read: "Читать →"
+  pricing_eyebrow: "Коммерческое предложение"
+  pricing_title: Тарифы
+  full_offer: "Полное коммерческое предложение"
+  popular: "Популярный"
+  negotiable: "По договорённости"
+  currency: "сум"
+  choose: Выбрать
+  offer_title: "Бухгалтерские и налоговые услуги"
+  request: "Оставить заявку"
+  print: "PDF / печать"
+  packages_title: "Пакет под ваш бизнес"
+  guarantees_eyebrow: "В каждом тарифе"
+  guarantees_title: Гарантии
+  guarantees_text: "С момента подписания договора мы берём ответственность за ваш учёт на себя."
+  steps_eyebrow: "Как мы работаем"
+  steps_title: "Начинаем за 4 шага"
+  extra_title: "Дополнительные услуги"
+  contact_eyebrow: Контакты
+  contact_title: "Запишитесь на бесплатную консультацию"
+  contact_lead: "Изучим текущее состояние вашего учёта и предложим подходящее решение."
+  f_name: "Ваше имя"
+  f_phone: Телефон
+  f_company: Компания
+  f_service: "Интересующая услуга"
+  f_choose: Выберите
+  f_tariff: Тариф
+  f_message: Сообщение
+  f_submit: "Отправить заявку"
+  f_note: "По нажатию откроется почтовая программа с готовым письмом."
+  f_subject: "Заявка с сайта"
+  question_title: "Остались вопросы?"
+  question_text: "Наши специалисты бесплатно проконсультируют по вашей ситуации."
+  rights: "Все права защищены."
+  filter_label: Рубрика
+  notfound_title: "Страница не найдена"
+  notfound_text: "Ссылка устарела или указана с ошибкой."
+  to_home: "На главную"
