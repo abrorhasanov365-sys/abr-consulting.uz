@@ -3,11 +3,7 @@
   role: Asoschi, auditor
   photo: /assets/img/team/abror-hasanov.jpg
   bio: "15+ yillik tajribaga ega auditor va soliq maslahatchisi. CAP, ACCA DipIFR."
-- name: "Xodim ismi"
-  role: Bosh buxgalter
-  photo: ""
-  bio: "Buxgalteriya hisobi va soliq hisobotlari."
 - name: Alixon Djalalov
-  role: Buxgalter
+  role: Yetakchi buxgalter
   photo: /assets/img/team/alixon-djalalov.jpg
   bio: "4 yillik tajribaga ega buxgalter. QQS va foyda solig‘i hisobotlarini tayyorlaydi, korxonaning moliyaviy holatini tahlil qiladi."
