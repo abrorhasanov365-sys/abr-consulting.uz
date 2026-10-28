@@ -1,0 +1,24 @@
+# ABR-CONSULTING sayti sozlamalari
+title: ABR-CONSULTING
+description: "Buxgalteriya autsorsingi, soliq maslahati va audit. Biznesingiz hisobini tartibli va xavfsiz yuritamiz."
+url: "https://abr-consulting.uz"
+baseurl: ""
+lang: uz_UZ
+timezone: Asia/Tashkent
+permalink: /yangiliklar/:year/:month/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+feed:
+  path: yangiliklar/feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { image: /assets/img/og.png }
+
+exclude: [README.md, Gemfile, Gemfile.lock, .pages.yml, vendor]

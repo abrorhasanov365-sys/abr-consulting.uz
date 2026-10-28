@@ -1,0 +1,59 @@
+---
+layout: default
+title: Tijorat taklifi
+description: "ABR-CONSULTING buxgalteriya va soliq xizmatlari bo'yicha tijorat taklifi va tariflar."
+body_class: offer
+---
+{%- assign c = site.data.company -%}{%- assign o = site.data.offer -%}
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow on-dark">Tijorat taklifi</p>
+    <h1>Buxgalteriya va soliq xizmatlari</h1>
+    <p class="lead">{{ o.intro }}</p>
+    <div class="actions no-print">
+      <a class="btn btn-cream" href="{{ '/#aloqa' | relative_url }}">So'rov qoldirish</a>
+      <button class="btn btn-ghost" type="button" onclick="window.print()">PDF / chop etish</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Tariflar</p><h2>Biznesingizga mos paket</h2></div>
+    {% include packages.html %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container about">
+    <div>
+      <p class="eyebrow">Har bir tarifda</p>
+      <h2>Kafolatlar</h2>
+      <p class="muted">Shartnoma tuzilgan kundan boshlab hisobingiz uchun javobgarlikni o'z zimmamizga olamiz.</p>
+    </div>
+    <ul class="checks">
+      {%- for item in o.included %}<li>{% include icon.html name="check" %}<span>{{ item }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Qanday ishlaymiz</p><h2>4 qadamda boshlaymiz</h2></div>
+    <ol class="steps">
+      {%- for s in o.steps %}<li><h3>{{ s.title }}</h3><p class="muted">{{ s.text }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Xizmatlar</p><h2>Qo'shimcha xizmatlar</h2></div>
+    <div class="grid cards-3">
+      {%- for s in site.data.services %}
+      <article class="card"><span class="card-ico">{% include icon.html name=s.icon %}</span><h3>{{ s.title }}</h3><p class="muted">{{ s.text }}</p></article>
+      {%- endfor %}
+    </div>
+    <p class="print-only">{{ c.name }} · {{ c.phone }} · {{ c.email }} · {{ site.url | remove: "https://" }}</p>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+# Tijorat taklifi: tariflar. price bo'sh bo'lsa "Kelishiladi" chiqadi.
+intro: "Biznesingiz hajmiga mos tarifni tanlang. Aniq narx hujjatlar soni va soliq rejimiga qarab belgilanadi."
+packages:
+  - name: Start
+    for: "YaTT va kichik korxonalar, aylanmadan soliq"
+    price: ""
+    period: "oyiga"
+    featured: false
+    features:
+      - "Oyiga 30 tagacha hujjat"
+      - "Soliq va statistika hisobotlari"
+      - "Ish haqi (5 nafargacha xodim)"
+      - "Telegram orqali maslahat"
+  - name: Biznes
+    for: "QQS to'lovchi o'rta korxonalar"
+    price: ""
+    period: "oyiga"
+    featured: true
+    features:
+      - "Oyiga 150 tagacha hujjat"
+      - "QQS, foyda solig'i va barcha hisobotlar"
+      - "Ish haqi va kadrlar (25 nafargacha)"
+      - "Elektron hisob-fakturalar nazorati"
+      - "Har chorakda boshqaruv hisoboti"
+  - name: Premium
+    for: "Yirik korxonalar va guruhlar"
+    price: ""
+    period: "oyiga"
+    featured: false
+    features:
+      - "Hujjatlar soni cheklanmagan"
+      - "Shaxsiy bosh buxgalter"
+      - "Soliq rejalashtirish va tekshiruvlarda himoya"
+      - "MHXS bo'yicha hisobot"
+      - "1C hamrohligi"
+
+# Barcha tariflarga kiradi
+included:
+  - "Shartnoma asosida moddiy javobgarlik"
+  - "Ma'lumotlar maxfiyligi kafolati"
+  - "Soliq organlari bilan yozishmalar"
+  - "Oylik qisqa hisobot rahbarga"
+
+# Ishlash bosqichlari
+steps:
+  - title: "Tanishuv"
+    text: "Biznesingiz va hozirgi hisob holati bilan tanishamiz (bepul)."
+  - title: "Taklif"
+    text: "Hajm va narxni belgilab, tijorat taklifini yuboramiz."
+  - title: "Shartnoma"
+    text: "Shartnoma imzolaymiz va hujjatlarni qabul qilamiz."
+  - title: "Hisob yuritish"
+    text: "Har oy hisobotlar va qisqa xulosa olasiz."

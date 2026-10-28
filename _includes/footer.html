@@ -1,0 +1,19 @@
+{%- assign c = site.data.company -%}
+<footer class="site-footer" id="aloqa-footer">
+  <div class="container footer-grid">
+    <div>
+      {% include logo.html variant="light" %}
+      <p class="muted">{{ c.tagline }}</p>
+    </div>
+    <ul class="contact-list">
+      <li>{% include icon.html name="phone" %}<a href="tel:{{ c.phone_link }}">{{ c.phone }}</a></li>
+      <li>{% include icon.html name="mail" %}<a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+      <li>{% include icon.html name="pin" %}<span>{{ c.address }}</span></li>
+    </ul>
+    <div class="socials">
+      {%- if c.telegram != "" %}<a href="https://t.me/{{ c.telegram }}" aria-label="Telegram">{% include icon.html name="telegram" %}</a>{% endif %}
+      {%- if c.instagram != "" %}<a href="https://instagram.com/{{ c.instagram }}" aria-label="Instagram">{% include icon.html name="instagram" %}</a>{% endif %}
+    </div>
+  </div>
+  <div class="container footer-bottom">© {{ site.time | date: "%Y" }} {{ c.name }}. Barcha huquqlar himoyalangan.</div>
+</footer>

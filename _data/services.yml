@@ -1,0 +1,19 @@
+# Xizmatlar ro'yxati. icon: ledger, tax, audit, ifrs, payroll, onec, shield, chart
+- icon: ledger
+  title: Buxgalteriya autsorsingi
+  text: "Birlamchi hujjatlardan moliyaviy hisobotgacha — butun hisobni biz yuritamiz."
+- icon: tax
+  title: Soliq hisobotlari va maslahat
+  text: "Hisobotlarni muddatida topshiramiz, soliq yukini qonuniy yo'llar bilan optimallashtiramiz."
+- icon: audit
+  title: Audit va ekspress-tekshiruv
+  text: "Hisobingizni soliq tekshiruvidan oldin ko'rib chiqamiz va xatolarni tuzatamiz."
+- icon: ifrs
+  title: MHXS (IFRS) bo'yicha hisobot
+  text: "Moliyaviy hisobotni xalqaro standartlarga transformatsiya qilamiz."
+- icon: payroll
+  title: Ish haqi va kadrlar
+  text: "Ish haqi hisob-kitobi, JShDS va ijtimoiy soliq, kadrlar hujjatlari."
+- icon: onec
+  title: 1C sozlash va hamrohlik
+  text: "1C dasturini biznesingizga moslab sozlaymiz va xodimlarni o'rgatamiz."

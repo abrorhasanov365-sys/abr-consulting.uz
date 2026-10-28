@@ -1,0 +1,32 @@
+{%- assign c = site.data.company -%}
+<section class="section contact" id="aloqa">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow on-dark">Aloqa</p>
+      <h2>Bepul maslahatga yoziling</h2>
+      <p class="lead">Hozirgi hisob holatingizni ko'rib chiqamiz va sizga mos yechimni taklif qilamiz.</p>
+      <ul class="contact-list">
+        <li>{% include icon.html name="phone" %}<a href="tel:{{ c.phone_link }}">{{ c.phone }}</a></li>
+        <li>{% include icon.html name="mail" %}<a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+        {%- if c.telegram != "" %}<li>{% include icon.html name="telegram" %}<a href="https://t.me/{{ c.telegram }}">@{{ c.telegram }}</a></li>{% endif %}
+        <li>{% include icon.html name="pin" %}{% if c.map_link != "" %}<a href="{{ c.map_link }}">{{ c.address }}</a>{% else %}<span>{{ c.address }}</span>{% endif %}</li>
+        <li>{% include icon.html name="clock" %}<span>{{ c.hours }}</span></li>
+      </ul>
+    </div>
+    <form class="form" id="request-form" data-email="{{ c.email }}">
+      <label>Ismingiz<input name="name" required autocomplete="name"></label>
+      <label>Telefon<input name="phone" type="tel" required autocomplete="tel" placeholder="+998"></label>
+      <label>Kompaniya<input name="company" autocomplete="organization"></label>
+      <label>Qiziqtirgan xizmat
+        <select name="service">
+          <option value="">Tanlang</option>
+          {%- for s in site.data.services %}<option>{{ s.title }}</option>{% endfor %}
+          {%- for p in site.data.offer.packages %}<option>Tarif: {{ p.name }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>Xabar<textarea name="message" rows="3"></textarea></label>
+      <button class="btn btn-cream" type="submit">So'rov yuborish</button>
+      <p class="form-note">Tugma bosilganda pochta dasturingiz tayyor xat bilan ochiladi.</p>
+    </form>
+  </div>
+</section>

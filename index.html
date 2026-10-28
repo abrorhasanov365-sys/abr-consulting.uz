@@ -1,0 +1,138 @@
+---
+layout: default
+body_class: home
+---
+{%- assign c = site.data.company -%}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow on-dark">{{ c.tagline }}</p>
+      <h1>{{ c.hero_title }}</h1>
+      <p class="lead">{{ c.hero_text }}</p>
+      <div class="actions">
+        <a class="btn btn-cream" href="{{ '/taklif/' | relative_url }}">Tijorat taklifi</a>
+        <a class="btn btn-ghost" href="#aloqa">Bepul maslahat</a>
+      </div>
+    </div>
+    <ul class="stats">
+      {%- for s in c.stats %}
+      <li><b>{{ s.value }}</b><span>{{ s.label }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="xizmatlar">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Xizmatlar</p>
+      <h2>Buxgalteriya va soliq bo'yicha to'liq xizmat</h2>
+    </div>
+    <div class="grid cards-3">
+      {%- for s in site.data.services %}
+      <article class="card">
+        <span class="card-ico">{% include icon.html name=s.icon %}</span>
+        <h3>{{ s.title }}</h3>
+        <p class="muted">{{ s.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="biz-haqimizda">
+  <div class="container about">
+    <div>
+      <p class="eyebrow">Biz haqimizda</p>
+      <h2>Nega aynan ABR-CONSULTING?</h2>
+      <p>{{ c.about }}</p>
+    </div>
+    <ul class="checks">
+      {%- for item in site.data.offer.included %}
+      <li>{% include icon.html name="check" %}<span>{{ item }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="mijozlar">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Mijozlar</p>
+      <h2>Bizga ishonch bildirganlar</h2>
+    </div>
+    <ul class="clients">
+      {%- for cl in site.data.clients %}
+      <li>
+        {%- if cl.logo != "" %}<img src="{{ cl.logo | relative_url }}" alt="{{ cl.name }}">{% else %}<b>{{ cl.name }}</b>{% endif %}
+        <span>{{ cl.sector }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="grid cards-2 quotes">
+      {%- for t in site.data.testimonials %}
+      <figure class="quote">
+        <blockquote>“{{ t.text }}”</blockquote>
+        <figcaption><b>{{ t.author }}</b>, {{ t.company }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="jamoa">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Jamoa</p>
+      <h2>Hisobingiz kimlarning qo'lida</h2>
+    </div>
+    <div class="grid cards-3">
+      {%- for m in site.data.team %}
+      <article class="member">
+        {%- if m.photo != "" %}
+        <img class="avatar" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+        {%- else %}
+        {%- assign parts = m.name | split: " " %}
+        <span class="avatar avatar-text">{{ parts[0] | slice: 0 }}{{ parts[1] | slice: 0 }}</span>
+        {%- endif %}
+        <div>
+          <h3>{{ m.name }}</h3>
+          <p class="role">{{ m.role }}</p>
+          <p class="muted">{{ m.bio }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="yangiliklar">
+  <div class="container">
+    <div class="section-head row">
+      <div>
+        <p class="eyebrow">Yangiliklar</p>
+        <h2>Buxgalteriya va soliq yangiliklari</h2>
+      </div>
+      <a class="link" href="{{ '/yangiliklar/' | relative_url }}">Barchasi →</a>
+    </div>
+    <div class="grid cards-3">
+      {%- for post in site.posts limit: 3 %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="tariflar">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Tijorat taklifi</p>
+      <h2>Tariflar</h2>
+      <p class="muted">{{ site.data.offer.intro }}</p>
+    </div>
+    {% include packages.html %}
+    <p class="center"><a class="btn" href="{{ '/taklif/' | relative_url }}">To'liq tijorat taklifi</a></p>
+  </div>
+</section>
+
+{% include contact.html %}

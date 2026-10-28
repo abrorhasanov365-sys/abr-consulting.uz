@@ -1,0 +1,1 @@
+{%- assign d = include.date -%}{%- assign m = d | date: "%-m" | minus: 1 -%}{{ d | date: "%-d" }}-{{ site.data.months[m] }}, {{ d | date: "%Y" }}

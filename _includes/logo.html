@@ -1,0 +1,5 @@
+{%- comment -%} Logo fayllari: assets/img/logo-dark.png (och fonda) va logo-light.png (to'q fonda). {%- endcomment -%}
+{%- assign v = include.variant | default: "dark" -%}
+<a class="logo" href="{{ '/' | relative_url }}">
+  <img src="{{ '/assets/img/logo-' | append: v | append: '.png' | relative_url }}" alt="{{ site.data.company.name }}" width="110" height="50">
+</a>

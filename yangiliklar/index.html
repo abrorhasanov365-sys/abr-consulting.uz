@@ -1,0 +1,28 @@
+---
+layout: default
+title: Yangiliklar
+description: "Buxgalteriya, soliq va audit bo'yicha yangiliklar va foydali maqolalar."
+---
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow on-dark">Yangiliklar</p>
+    <h1>Buxgalteriya va soliq yangiliklari</h1>
+    <p class="lead">Qonunchilikdagi o'zgarishlar, muddatlar va amaliy maslahatlar.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    {%- assign cats = site.posts | map: "category" | uniq | compact -%}
+    {%- if cats.size > 1 %}
+    <div class="filters" role="group" aria-label="Turkum">
+      <button class="chip is-active" data-filter="">Barchasi</button>
+      {%- for cat in cats %}<button class="chip" data-filter="{{ cat }}">{{ cat }}</button>{% endfor %}
+    </div>
+    {%- endif %}
+    <div class="grid cards-3" id="post-list">
+      {%- for post in site.posts %}
+      <div data-category="{{ post.category }}">{% include post-card.html post=post %}</div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

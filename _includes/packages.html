@@ -1,0 +1,16 @@
+<div class="grid cards-3 packages">
+  {%- for p in site.data.offer.packages %}
+  <article class="package{% if p.featured %} featured{% endif %}">
+    {%- if p.featured %}<span class="badge">Ko'p tanlanadi</span>{% endif %}
+    <h3>{{ p.name }}</h3>
+    <p class="muted">{{ p.for }}</p>
+    <p class="price">{% if p.price != "" %}{{ p.price }} <small>so'm / {{ p.period }}</small>{% else %}Kelishiladi{% endif %}</p>
+    <ul class="checks small">
+      {%- for f in p.features %}
+      <li>{% include icon.html name="check" %}<span>{{ f }}</span></li>
+      {%- endfor %}
+    </ul>
+    <a class="btn {% unless p.featured %}btn-outline{% endunless %}" href="{{ '/#aloqa' | relative_url }}" data-package="{{ p.name }}">Tanlash</a>
+  </article>
+  {%- endfor %}
+</div>

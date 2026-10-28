@@ -1,0 +1,13 @@
+# Jamoa a'zolari. photo — assets/img/team/ papkasidagi rasm. Rasm bo'lmasa, ism bosh harflari chiqadi.
+- name: Abror Hasanov
+  role: Asoschi, auditor
+  photo: /assets/img/team/abror-hasanov.jpg
+  bio: "15+ yillik tajribaga ega auditor va soliq maslahatchisi. CAP, ACCA DipIFR."
+- name: "Xodim ismi"
+  role: Bosh buxgalter
+  photo: ""
+  bio: "Buxgalteriya hisobi va soliq hisobotlari."
+- name: "Xodim ismi"
+  role: Buxgalter
+  photo: ""
+  bio: "Birlamchi hujjatlar, ish haqi va kadrlar hisobi."
