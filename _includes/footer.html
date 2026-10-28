@@ -9,10 +9,7 @@
       <li>{% include icon.html name="mail" %}<a href="mailto:{{ k.email }}">{{ k.email }}</a></li>
       <li>{% include icon.html name="pin" %}<span>{{ d.company.address }}</span></li>
     </ul>
-    <div class="socials">
-      {%- if k.telegram != "" %}<a href="https://t.me/{{ k.telegram }}" aria-label="Telegram">{% include icon.html name="telegram" %}</a>{% endif %}
-      {%- if k.instagram != "" %}<a href="https://instagram.com/{{ k.instagram }}" aria-label="Instagram">{% include icon.html name="instagram" %}</a>{% endif %}
-    </div>
+    {% include socials.html %}
   </div>
   <div class="container footer-bottom">© {{ site.time | date: "%Y" }} ABR-CONSULTING. {{ t.rights }}</div>
 </footer>

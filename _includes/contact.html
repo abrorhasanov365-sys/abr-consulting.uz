@@ -7,11 +7,10 @@
       <ul class="contact-list">
         <li>{% include icon.html name="phone" %}<a href="tel:{{ k.phone_link }}">{{ k.phone }}</a></li>
         <li>{% include icon.html name="mail" %}<a href="mailto:{{ k.email }}">{{ k.email }}</a></li>
-        {%- if k.telegram != "" %}<li>{% include icon.html name="telegram" %}<a href="https://t.me/{{ k.telegram }}">@{{ k.telegram }}</a></li>{% endif %}
-        {%- if k.instagram != "" %}<li>{% include icon.html name="instagram" %}<a href="https://instagram.com/{{ k.instagram }}">@{{ k.instagram }}</a></li>{% endif %}
         <li>{% include icon.html name="pin" %}{% if k.map_link != "" %}<a href="{{ k.map_link }}">{{ d.company.address }}</a>{% else %}<span>{{ d.company.address }}</span>{% endif %}</li>
         <li>{% include icon.html name="clock" %}<span>{{ d.company.hours }}</span></li>
       </ul>
+      {% include socials.html %}
     </div>
     <form class="form" id="request-form" data-email="{{ k.email }}" data-subject="{{ t.f_subject }}">
       <label>{{ t.f_name }}<input name="name" required autocomplete="name"></label>
