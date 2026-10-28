@@ -116,10 +116,12 @@ p{margin:0}
 .quote figcaption b{color:var(--ink)}
 
 /* Team */
-.member{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid var(--cream);background:var(--cream)}
-.avatar-text{display:grid;place-items:center;font:italic 800 1.6rem var(--head);color:var(--navy)}
-.role{font-weight:700;color:var(--navy);margin:2px 0 8px;font-size:.95rem}
+.member{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;background:var(--cream);display:block}
+.portrait-text{display:grid;place-items:center;font:italic 800 4rem var(--head);color:var(--cream);background:var(--navy)}
+.member-body{padding:22px 24px 26px;display:grid;gap:4px}
+.role{font-weight:700;color:var(--navy);margin:0 0 6px;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em}
+#jamoa .cards-3,#komanda .cards-3{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));max-width:1000px}
 
 /* News */
 .post-card{display:grid;gap:10px;align-content:start;text-decoration:none;transition:transform .15s,border-color .15s;height:100%}

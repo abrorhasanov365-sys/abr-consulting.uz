@@ -89,12 +89,12 @@ layout: default
       {%- for m in d.team %}
       <article class="member">
         {%- if m.photo != "" %}
-        <img class="avatar" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+        <img class="portrait" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
         {%- else %}
         {%- assign parts = m.name | split: " " %}
-        <span class="avatar avatar-text">{{ parts[0] | slice: 0 }}{{ parts[1] | slice: 0 }}</span>
+        <span class="portrait portrait-text">{{ parts[0] | slice: 0 }}{{ parts[1] | slice: 0 }}</span>
         {%- endif %}
-        <div>
+        <div class="member-body">
           <h3>{{ m.name }}</h3>
           <p class="role">{{ m.role }}</p>
           <p class="muted">{{ m.bio }}</p>
