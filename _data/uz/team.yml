@@ -10,6 +10,11 @@
   level: 3
   photo: /assets/img/team/alixon-djalalov.jpg
   bio: "4 yillik tajribaga ega buxgalter. QQS va foyda solig‘i hisobotlarini tayyorlaydi, korxonaning moliyaviy holatini tahlil qiladi."
+- name: Saboxat Mukhamedova
+  role: Buxgalter
+  level: 4
+  photo: /assets/img/team/saboxat-mukhamedova.jpg
+  bio: "3 yillik tajriba: foyda solig'i va QQS hisobotlarini tayyorlash, buxgalteriya hujjatlarini yuritish va eksport-import operatsiyalarini hisobga olish."
 - name: Abdurasul Mirzohamdamov
   role: Buxgalter
   level: 4
@@ -35,8 +40,3 @@
   level: 3
   photo: /assets/img/team/javohir-qobilov.jpg
   bio: "4 yillik tajribaga ega buxgalter. QQS, foyda solig'i va eksport-import hisobotlarini tayyorlaydi, korxonaning moliyaviy holatini tahlil qiladi."
-- name: Saboxat Mukhamedova
-  role: Buxgalter
-  level: 4
-  photo: /assets/img/team/saboxat-mukhamedova.jpg
-  bio: "3 yillik tajriba: foyda solig'i va QQS hisobotlarini tayyorlash, buxgalteriya hujjatlarini yuritish va eksport-import operatsiyalarini hisobga olish."
