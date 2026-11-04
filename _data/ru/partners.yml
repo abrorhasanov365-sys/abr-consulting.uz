@@ -1,0 +1,16 @@
+# Партнёры. logo — изображение из assets/img/partners/. url — сайт партнёра.
+- name: "FINANCE TEAM"
+  url: "https://www.finteam.uz"
+  site: "finteam.uz"
+  logo: /assets/img/partners/finance-team.png
+  text: "Учебный центр бухгалтерии и финансов: курсы бухгалтерского учёта, 1С, налогового учёта, МСФО (IFRS) и Excel."
+- name: "TAXAUDIT"
+  url: "https://taxaudit.uz"
+  site: "taxaudit.uz"
+  logo: /assets/img/partners/taxaudit.png
+  text: "Организация налоговых консультантов: налоговые консультации, отчётность, подготовка к проверкам и разрешение споров."
+- name: "FinRep"
+  url: "https://finrep.uz"
+  site: "finrep.uz"
+  logo: /assets/img/partners/finrep.png
+  text: "Консалтинг по применению МСФО (IFRS). Основана профессионалами с многолетним опытом работы в международных аудиторских организациях."
