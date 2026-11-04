@@ -1,0 +1,16 @@
+# Hamkorlar. logo — assets/img/partners/ papkasidagi rasm. url — hamkor sayti.
+- name: "FINANCE TEAM"
+  url: "https://www.finteam.uz"
+  site: "finteam.uz"
+  logo: /assets/img/partners/finance-team.png
+  text: "Buxgalteriya va moliya o'quv markazi: buxgalteriya hisobi, 1C, soliq hisobi, MHXS (IFRS) va Excel kurslari."
+- name: "TAXAUDIT"
+  url: "https://taxaudit.uz"
+  site: "taxaudit.uz"
+  logo: /assets/img/partners/taxaudit.png
+  text: "Soliq maslahatchilari tashkiloti: soliq maslahati, soliq hisobotlari, tekshiruvlarga tayyorgarlik va nizolarni hal qilish."
+- name: "FinRep"
+  url: "https://finrep.uz"
+  site: "finrep.uz"
+  logo: /assets/img/partners/finrep.png
+  text: "MHXS (IFRS) ni qo'llash bo'yicha konsalting. Xalqaro audit tashkilotlarida ko'p yillik tajribaga ega mutaxassislar tomonidan tashkil etilgan."
