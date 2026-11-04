@@ -83,7 +83,26 @@ layout: default
   </div>
 </section>
 
-<section class="section section-alt" id="{{ t.ids.team }}">
+<section class="section section-alt" id="{{ t.ids.partners }}">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{{ t.partners_eyebrow }}</p>
+      <h2>{{ t.partners_title }}</h2>
+    </div>
+    <div class="partners">
+      {%- for p in d.partners %}
+      <a class="partner" href="{{ p.url }}" target="_blank" rel="noopener" title="{{ t.partners_visit }}: {{ p.site }}">
+        <span class="partner-logo"><img src="{{ p.logo | relative_url }}" alt="{{ p.name }}" loading="lazy"></span>
+        <h3>{{ p.name }}</h3>
+        <p class="muted">{{ p.text }}</p>
+        <span class="partner-link">{{ p.site }} ↗</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="{{ t.ids.team }}">
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">{{ t.team_eyebrow }}</p>
@@ -112,7 +131,7 @@ layout: default
   </div>
 </section>
 
-<section class="section" id="{{ t.ids.news }}">
+<section class="section section-alt" id="{{ t.ids.news }}">
   <div class="container">
     <div class="section-head row">
       <div>
@@ -130,7 +149,7 @@ layout: default
   </div>
 </section>
 
-<section class="section section-alt" id="{{ t.ids.pricing }}">
+<section class="section" id="{{ t.ids.pricing }}">
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">{{ t.pricing_eyebrow }}</p>
