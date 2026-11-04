@@ -7,7 +7,7 @@ uz:
   skip: "Asosiy qismga o'tish"
   menu: Menyu
   contact_btn: "Bog'lanish"
-  ids: { services: xizmatlar, about: biz-haqimizda, clients: mijozlar, team: jamoa, news: yangiliklar, pricing: tariflar, contact: aloqa }
+  ids: { services: xizmatlar, about: biz-haqimizda, clients: mijozlar, team: jamoa, news: yangiliklar, pricing: tariflar, contact: aloqa, partners: hamkorlar }
   offer_btn: "Tijorat taklifi"
   free_consult: "Bepul maslahat"
   services_eyebrow: Xizmatlar
@@ -16,6 +16,9 @@ uz:
   about_title: "Nega aynan ABR-CONSULTING?"
   clients_eyebrow: Mijozlar
   clients_title: "Bizga ishonch bildirganlar"
+  partners_eyebrow: Hamkorlar
+  partners_title: "Bizning hamkorlarimiz"
+  partners_visit: "Saytga o'tish"
   team_eyebrow: "ABR-CONSULTING"
   team_title: "Bizning jamoa"
   news_eyebrow: Yangiliklar
@@ -70,7 +73,7 @@ ru:
   skip: "Перейти к содержанию"
   menu: Меню
   contact_btn: "Связаться"
-  ids: { services: uslugi, about: o-nas, clients: klienty, team: komanda, news: novosti, pricing: tarify, contact: kontakty }
+  ids: { services: uslugi, about: o-nas, clients: klienty, team: komanda, news: novosti, pricing: tarify, contact: kontakty, partners: partnery }
   offer_btn: "Коммерческое предложение"
   free_consult: "Бесплатная консультация"
   services_eyebrow: Услуги
@@ -79,6 +82,9 @@ ru:
   about_title: "Почему ABR-CONSULTING?"
   clients_eyebrow: Клиенты
   clients_title: "Нам доверяют"
+  partners_eyebrow: Партнёры
+  partners_title: "Наши партнёры"
+  partners_visit: "Перейти на сайт"
   team_eyebrow: "ABR-CONSULTING"
   team_title: "Наша команда"
   news_eyebrow: Новости
