@@ -4,7 +4,7 @@ GitHub Pages'da ishlaydigan Jekyll sayti, ikki tilda: o'zbekcha (`/`) va ruscha 
 
 ## Ma'lumotlarni qanday yangilash mumkin
 
-**1-usul — tahrirlash paneli (eng oson).** https://app.pagescms.org saytiga GitHub orqali kiring, shu repozitoriyni tanlang. Chap menyuda bo'limlar chiqadi: Yangiliklar, Kompaniya ma'lumotlari, Xizmatlar, Mijozlar, Jamoa, Tijorat taklifi. Tahrirlab "Save" bosing.
+**1-usul — tahrirlash paneli (eng oson).** https://app.pagescms.org saytiga GitHub orqali kiring, shu repozitoriyni tanlang. Chap menyuda bo'limlar chiqadi: Yangiliklar, Kompaniya ma'lumotlari, Xizmatlar, Mijozlar, Hamkorlar, Jamoa, Tijorat taklifi. Tahrirlab "Save" bosing.
 
 **2-usul — GitHub'da to'g'ridan-to'g'ri.** Faylni oching, qalam belgisini bosing, o'zgartirib "Commit changes" bosing.
 
@@ -16,6 +16,7 @@ Har bir til uchun matnlar alohida papkada: o'zbekcha `_data/uz/`, ruscha `_data/
 | Bosh sahifa matni, manzil, ish vaqti | `_data/uz/company.yml`, `_data/ru/company.yml` |
 | Xizmatlar | `_data/uz/services.yml`, `_data/ru/services.yml` |
 | Mijozlar va ularning fikrlari | `_data/*/clients.yml`, `_data/*/testimonials.yml` |
+| Hamkorlar (logo, sayt, tavsif) | `_data/*/partners.yml`, logolar `assets/img/partners/` |
 | Jamoa | `_data/*/team.yml` (rasmlar `assets/img/team/`) |
 | Tariflar va tijorat taklifi | `_data/*/offer.yml` |
 | Menyu | `_data/*/nav.yml` |

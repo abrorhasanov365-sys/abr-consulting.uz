@@ -70,6 +70,17 @@ content:
     fields:
       - { name: sector, label: Soha, type: string }
       - { name: companies, label: Kompaniyalar, type: string, list: true }
+  - name: partners_uz
+    label: "Hamkorlar (UZ)"
+    type: file
+    path: _data/uz/partners.yml
+    list: true
+    fields:
+      - { name: name, label: Nomi, type: string }
+      - { name: url, label: "Sayt havolasi", type: string }
+      - { name: site, label: "Sayt nomi (ko'rinadigan)", type: string }
+      - { name: logo, label: Logo, type: image }
+      - { name: text, label: Tavsif, type: text }
   - name: testimonials_uz
     label: "Mijozlar fikri (UZ)"
     type: file
@@ -173,6 +184,17 @@ content:
     fields:
       - { name: sector, label: Soha, type: string }
       - { name: companies, label: Kompaniyalar, type: string, list: true }
+  - name: partners_ru
+    label: "Hamkorlar (RU)"
+    type: file
+    path: _data/ru/partners.yml
+    list: true
+    fields:
+      - { name: name, label: Nomi, type: string }
+      - { name: url, label: "Sayt havolasi", type: string }
+      - { name: site, label: "Sayt nomi (ko'rinadigan)", type: string }
+      - { name: logo, label: Logo, type: image }
+      - { name: text, label: Tavsif, type: text }
   - name: testimonials_ru
     label: "Mijozlar fikri (RU)"
     type: file
